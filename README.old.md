@@ -18,3 +18,15 @@ Tailwind is an amazing CSS framework which allows you to "rapidly build modern w
 -   craco.config.js --- Short and sweet, it's an hacky layer on top of Create React App (CRA) to customize it's configuration. This is achieved by overriding the cache of the require calls made by CRA to replace the exported content with our customized configuration.
 
 CRACO stands for => Create React App Configuration Overide
+
+## steps & changes:
+
+1. npx create-react-app
+2. deleted unnecessary files
+3. installed dependencies
+4. added tailwind.config.js
+5. added craco.config.js
+6. added folders in src folder
+7. added dummy data in /src/data folder
+8. created 'Settings' button with syncfusion and styled it
+
