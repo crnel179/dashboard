@@ -30,3 +30,4 @@ CRACO stands for => Create React App Configuration Overide
 7. added dummy data in /src/data folder
 8. created 'Settings' button with syncfusion and styled it
 9. adding the sidebar & navbar styling
+10. adding the routes
