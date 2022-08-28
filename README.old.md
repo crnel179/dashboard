@@ -21,6 +21,14 @@ CRACO stands for => Create React App Configuration Overide
 
 ## steps & changes:
 
+### planning:
+
+1. brainstorming
+2.
+3. component mapping
+
+### app development:
+
 1. npx create-react-app
 2. deleted unnecessary files
 3. installed dependencies
@@ -33,3 +41,5 @@ CRACO stands for => Create React App Configuration Overide
 10. adding the routes
 11. creating the boilerplates for all the components & pages
 12. creating index.jsx within components and pages folder to export all in the app with one line
+
+13. adding functionality & styling to the sidebar component
