@@ -24,8 +24,9 @@ CRACO stands for => Create React App Configuration Overide
 ### planning:
 
 1. brainstorming
-2.
-3. component mapping
+2. card sorting
+3. create Project structure
+4. component tree mapping
 
 ### app development:
 
@@ -43,3 +44,4 @@ CRACO stands for => Create React App Configuration Overide
 12. creating index.jsx within components and pages folder to export all in the app with one line
 
 13. adding functionality & styling to the sidebar component
+14. implement the Context API, add it to the index.js and enhance functionality of App and Sidebar components

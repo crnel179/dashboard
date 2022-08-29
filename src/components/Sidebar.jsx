@@ -3,11 +3,11 @@ import { Link, NavLink } from 'react-router-dom';
 import { SiShopware } from 'react-icons/si';
 import { MdOutlineCancel } from 'react-icons/md';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
-
 import { links } from '../data/dummy';
+import { useStateContext } from '../contexts/ContextProvider';
 
 const Sidebar = () => {
-    const activeMenu = true;
+    const { activeMenu, setActiveMenu } = useStateContext();
     const activeLink =
         'flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-white text-md m-2';
     const nonActiveLink =
@@ -20,10 +20,10 @@ const Sidebar = () => {
                     <div className='flex justify-between items-center'>
                         <Link
                             to='/'
-                            onClick={() => {}}
+                            onClick={() => setActiveMenu(false)}
                             className='items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900'
                         >
-                            <SiShopware /> <span>Orders</span>
+                            <SiShopware /> <span>Sidebar</span>
                         </Link>
                         <TooltipComponent
                             content='Menu'
@@ -32,7 +32,11 @@ const Sidebar = () => {
                             {/* closing x button on top-right of the sidebar */}
                             <button
                                 type='button'
-                                onClick={() => {}}
+                                onClick={() =>
+                                    setActiveMenu(
+                                        (prevActiveMenu) => !prevActiveMenu
+                                    )
+                                }
                                 className='text-xl rounded-full p-3 hover:bg-light-gray mt-4 block md:hidden'
                             >
                                 <MdOutlineCancel />
@@ -57,10 +61,10 @@ const Sidebar = () => {
                                                 : nonActiveLink
                                         }
                                     >
-                                      {link.icon}
-                                      <span className='capitalize'>
-                                        {link.name}
-                                      </span>
+                                        {link.icon}
+                                        <span className='capitalize'>
+                                            {link.name}
+                                        </span>
                                     </NavLink>
                                 ))}
                             </div>
