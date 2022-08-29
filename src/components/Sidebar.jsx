@@ -8,7 +8,7 @@ import { useStateContext } from '../contexts/ContextProvider';
 
 const Sidebar = () => {
     const { activeMenu, setActiveMenu, screenSize } = useStateContext();
-
+    // logic to toggle sidebar on & off on click depending on screen size
     const handleCloseSidebar = () => {
         if (activeMenu && screenSize <= 900) {
             setActiveMenu(false);
@@ -61,6 +61,7 @@ const Sidebar = () => {
                                     <NavLink
                                         to={`${link.name}`}
                                         key={link.name}
+                                        // toggle sidebar on & off on clicking a link on the sidebar depending on screen size
                                         onClick={handleCloseSidebar}
                                         className={({ isActive }) =>
                                             isActive
