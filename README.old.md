@@ -46,3 +46,4 @@ CRACO stands for => Create React App Configuration Overide
 13. adding functionality & styling to the sidebar component
 14. implement the Context API, add it to the index.js and enhance functionality of App and Sidebar components
 15. implement the navigation bar and its context
+16. context to toggle sidebar on & off upon screen size/resize

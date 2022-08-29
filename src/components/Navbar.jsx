@@ -28,8 +28,36 @@ const NavButtons = ({ title, customFunction, icon, color, dotColor }) => (
 );
 
 const Navbar = () => {
-    const { activeMenu, setActiveMenu, isClicked, setIsClicked, handleClick } =
-        useStateContext();
+    const {
+        activeMenu,
+        setActiveMenu,
+        isClicked,
+        setIsClicked,
+        handleClick,
+        screenSize,
+        setScreenSize,
+    } = useStateContext();
+
+    // track the screen size & resize
+    useEffect(() => {
+        const handleResize = () => setScreenSize(window.innerWidth);
+
+        window.addEventListener('resize', handleResize);
+
+        handleResize();
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    // toggles sidebar on & off upon screen size
+    useEffect(() => {
+        if (screenSize <= 900) {
+            setActiveMenu(false);
+        } else {
+            setActiveMenu(true);
+        }
+    }, [screenSize]);
+
     return (
         <div className='flex justify-between p-2 md:mx-6 relative'>
             <NavButtons
